@@ -1,0 +1,24 @@
+{
+    "name": "lojaObreiro",
+    "base": "PersistedModel",
+    "idInjection": true,
+    "options": {
+        "validateUpsert": true
+    },
+    "properties": {
+        "nome": {
+            "type": "string",
+            "required": true
+        },
+        "numero": {
+            "type": "string"
+        },
+        "principal": {
+            "type": "boolean"
+        }
+    },
+    "validations": [],
+    "relations": {},
+    "acls": [],
+    "methods": {}
+}

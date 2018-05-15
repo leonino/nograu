@@ -1,0 +1,8 @@
+{
+  "name": "IonicConsumeRestApiExample",
+  "app_id": "c5112992",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}

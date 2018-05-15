@@ -1,0 +1,34 @@
+{
+    "name": "telefone",
+    "base": "PersistedModel",
+    "idInjection": true,
+    "options": {
+        "validateUpsert": true
+    },
+    "properties": {
+        "operadora": {
+            "type": "string",
+            "required": true
+        },
+        "tipo": {
+            "type": "string"
+        },
+        "codigoPais": {
+            "type": "string"
+        },
+        "ddd": {
+            "type": "string",
+            "required": true
+        },
+        "numero": {
+            "type": "string"
+        },
+        "principal": {
+            "type": "boolean"
+        }
+    },
+    "validations": [],
+    "relations": {},
+    "acls": [],
+    "methods": {}
+}

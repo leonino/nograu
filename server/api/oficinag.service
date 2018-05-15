@@ -1,0 +1,17 @@
+#!/usr/bin/env node
+
+[Unit]
+Description=Oficina GOB
+
+[Service]
+ExecStart=/home/marcos/dev/ionicDev/oficinaG/server/api/server/server.js
+Restart=always
+User=nogroup
+# Note RHEL/Fedora uses 'nobody', Debian/Ubuntu uses 'nogroup'
+Group=nogroup  
+Environment=PATH=/usr/bin:/usr/local/bin
+Environment=NODE_ENV=production
+WorkingDirectory=/home/marcos/dev/ionicDev/oficinaG/server/api/server
+
+[Install]
+WantedBy=multi-user.target

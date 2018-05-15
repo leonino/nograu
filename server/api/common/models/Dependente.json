@@ -1,0 +1,29 @@
+{
+    "name": "dependente",
+    "base": "PersistedModel",
+    "idInjection": true,
+    "options": {
+        "validateUpsert": true
+    },
+    "properties": {
+        "nome": {
+            "type": "string",
+            "required": true
+        },
+        "dataNascimento": {
+            "type": "string"
+        },
+        "parentesco": {
+            "type": "string"
+        },
+        "sexo": {
+            "type": "string",
+            "required": true,
+            "default": "M"
+        }
+    },
+    "validations": [],
+    "relations": {},
+    "acls": [],
+    "methods": {}
+}

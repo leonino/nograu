@@ -1,0 +1,138 @@
+{
+    "name": "obreiro",
+    "base": "PersistedModel",
+    "idInjection": true,
+    "options": {
+        "validateUpsert": true
+    },
+    "properties": {
+        "nome": {
+            "type": "string",
+            "required": true
+        },
+        "grau": {
+            "type": "string"
+        },
+        "cim": {
+            "type": "number"
+        },
+        "dataNascimento": {
+            "type": "string"
+        },
+        "sexo": {
+            "type": "string",
+            "required": true,
+            "default": "M"
+        },
+        "naturalidade": {
+            "localidade": {
+                "type": "string"
+            },
+            "uf": {
+                "type": "string"
+            },
+            "nacionalidade": {
+                "type": "string"
+            }
+        },
+        "endereco": {
+            "cep": {
+                "type": "string"
+            },
+            "logradouro": {
+                "type": "string"
+            },
+            "numero": {
+                "type": "string"
+            },
+            "bairro": {
+                "type": "string"
+            },
+            "localidade": {
+                "type": "string"
+            },
+            "uf": {
+                "type": "string"
+            },
+            "unidade": {
+                "type": "string"
+            },
+            "ibge": {
+                "type": "string"
+            },
+            "gia": {
+                "type": "string"
+            }
+        },
+        "email": {
+            "type": "string"
+        },
+        "cpf": {
+            "type": "string"
+        },
+        "rg": {
+            "numero": {
+                "type": "string"
+            },
+            "orgao": {
+                "type": "string"
+            },
+            "dataExpedicao": {
+                "type": "string"
+            }
+        },
+        "titulo": {
+            "numero": {
+                "type": "string"
+            },
+            "zona": {
+                "type": "string"
+            },
+            "secao": {
+                "type": "string"
+            }
+        },
+        "tipoSanguineo": {
+            "type": "string"
+        },
+        "estadoCivil": {
+            "type": "string"
+        },
+        "dataCasamento": {
+            "type": "string"
+        },
+        "grauInstrucao": {
+            "type": "string"
+        },
+        "formacaoProfissional": {
+            "type": "string"
+        },
+        "empregador": {
+            "nome": { "type": "string" },
+            "endereco": {
+                "cep": { "type": "string" },
+                "logradouro": { "type": "string" },
+                "bairro": { "type": "string" },
+                "localidade": { "type": "string" },
+                "uf": { "type": "string" },
+                "unidade": { "type": "string" },
+                "ibge": { "type": "string" },
+                "gia": { "type": "string" }
+            },
+            "telefone": {
+                "operadora": { "type": "string" },
+                "tipo": { "type": "string" },
+                "codigoPais": { "type": "string" },
+                "ddd": { "type": "string" },
+                "numero": { "type": "string" }
+            }
+        },
+        "lojas": [{ "lojaObreiro": { "type": "LojaObreiro" } }],
+        "telefones": [{ "telefone": { "type": "Telefone" } }],
+        "dependentes": [{ "dependente": { "type": "Dependente" } }]
+    },
+    "validations": [],
+    "relations": {},
+    "acls": [],
+    "methods": {}
+}
