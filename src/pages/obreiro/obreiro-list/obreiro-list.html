@@ -1,0 +1,67 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Obreiro da Loja
+            <p>Oswaldo Resende Nº 2095</p>
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content style="margin: 0px;">
+
+    <ion-list style="padding: 1px; margin: 0px;">
+        <ion-list-header>
+            <ion-grid fixed no-padding>
+                <ion-row>
+                    <ion-col col-8 style="text-align: left;">
+                        Nome
+                    </ion-col>
+                    <ion-col col-2 style="text-align: center;">
+                        Grau
+                    </ion-col>
+                    <ion-col col-2 style="text-align: center;">
+                        CIM
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-list-header>
+        <ion-item-sliding *ngFor="let obreiro of obreiros">
+            <ion-item (click)="openObreiro(obreiro.id)" (press)="gestoEvent($event, obreiro.id)">
+                <ion-grid fixed no-padding>
+                    <ion-row>
+                        <ion-col col-8 style="text-align: left;">
+                            {{ obreiro.nome }}
+                        </ion-col>
+                        <ion-col col-2 style="text-align: center;">
+                            {{ obreiro.grau }}
+                        </ion-col>
+                        <ion-col col-2 style="text-align: center;">
+                            {{ obreiro.cim }}
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+            </ion-item>
+
+            <ion-item-options side="left">
+                <button ion-button color="primary" (click)="openEditObreiro(obreiro.id)">
+                  <ion-icon name="create"></ion-icon>
+                  Editar
+                </button>
+                <button ion-button color="danger" (click)="deleteObreiro(obreiro)">
+                  <ion-icon name="trash"></ion-icon>
+                  Excluir
+                </button>
+            </ion-item-options>
+
+        </ion-item-sliding>
+    </ion-list>
+
+    <ion-infinite-scroll (ionInfinite)="getObreiros($event)">
+        <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Aguarde...">
+        </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+
+    <ion-fab right bottom>
+        <button ion-fab color="danger" (click)="openCreateObreiro()"><ion-icon name="add"></ion-icon></button>
+    </ion-fab>
+</ion-content>

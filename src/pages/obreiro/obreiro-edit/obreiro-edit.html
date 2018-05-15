@@ -1,0 +1,142 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Ionic Rest Api Example
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-item>
+            <ion-label stacked>Nome</ion-label>
+            <ion-input type="text" name="nome" [(ngModel)]="model.nome"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label stacked>Data de Nascimento</ion-label>
+            <ion-input type="Date" name="dataNascimento" [(ngModel)]="model.dataNascimento"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label stacked>CIM</ion-label>
+            <ion-input type="text" name="last_name" [(ngModel)]="model.cim"></ion-input>
+        </ion-item>
+
+
+        <ion-item>
+            <ion-label stacked>Grau</ion-label>
+            <ion-select [(ngModel)]="model.grau" multiple="false" disabled="{{model.grau.length>=2}}">
+                <ion-option value="MI">Mestre Instalado</ion-option>
+                <ion-option value="MM">Mestre Maçom</ion-option>
+                <ion-option value="CM">Companheiro Maçom</ion-option>
+                <ion-option value="AM">Aprendiz Maçom</ion-option>
+            </ion-select>
+        </ion-item>
+
+        <ion-item>
+            <ion-label stacked>Sexo</ion-label>
+            <ion-select [(ngModel)]="model.sexo" multiple="false">
+                <ion-option value="M">Masculino</ion-option>
+                <ion-option value="F">Feminino</ion-option>
+            </ion-select>
+        </ion-item>
+
+        <ion-item>
+            <ion-label stacked>Email</ion-label>
+            <ion-input type="text" name="email" [(ngModel)]="model.email"></ion-input>
+        </ion-item>
+
+        <div style="padding-left: 5px; padding-right: 5px;">
+            <ion-label style="padding-left: 12px; font-size: medium;" stacked>
+                Naturalidade</ion-label>
+            <div style="border: solid 1px silver;">
+                <ion-item>
+                    <ion-label stacked>localidade</ion-label>
+                    <ion-input type="text" name="localidadeNat" [(ngModel)]="model.naturalidade.localidade">
+                    </ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label stacked>Estado</ion-label>
+                    <ion-input type="text" name="ufNat" [(ngModel)]="model.naturalidade.uf">
+                    </ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label stacked>Nacionalidade</ion-label>
+                    <ion-input type="text" name="nacionalidadeNat" [(ngModel)]="model.naturalidade.nacionalidade">
+                    </ion-input>
+                </ion-item>
+            </div>
+        </div>
+
+        <div style="padding-left: 5px; padding-right: 5px;">
+            <ion-label style="padding-left: 12px; font-size: medium;" stacked>Endereço</ion-label>
+            <div style="border: solid 1px silver;">
+                <ion-item>
+                    <ion-label stacked>CEP</ion-label>
+                    <ion-input type="text" name="cepEndereco" [(ngModel)]="model.endereco.cep">
+                    </ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label stacked>Logradouro</ion-label>
+                    <ion-input type="text" name="logradouroEndereco" [(ngModel)]="model.endereco.logradouro">
+                    </ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label stacked>Número</ion-label>
+                    <ion-input type="text" name="numeroEndereco" [(ngModel)]="model.endereco.numero">
+                    </ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label stacked>Complemento</ion-label>
+                    <ion-input type="text" name="complementoEndereco" [(ngModel)]="model.endereco.complemento">
+                    </ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label stacked>Bairro</ion-label>
+                    <ion-input type="text" name="bairroEndereco" [(ngModel)]="model.endereco.bairro">
+                    </ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label stacked>Localidade</ion-label>
+                    <ion-input type="text" name="localidadeEndereco" [(ngModel)]="model.endereco.localidade">
+                    </ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label stacked>Estado</ion-label>
+                    <ion-input type="text" name="ufEndereco" [(ngModel)]="model.endereco.uf">
+                    </ion-input>
+                </ion-item>
+            </div>
+        </div>
+
+        <ion-item>
+            <ion-label stacked>CPF</ion-label>
+            <ion-input type="text" name="cpf" [(ngModel)]="model.cpf"></ion-input>
+        </ion-item>
+
+        <div>
+            <ion-label floating>RG:
+                <ion-input type="text" name="rgNumero" [(ngModel)]="model.rg.numero" placeholder="Numero"></ion-input>
+                <ion-input type="text" name="rgOrgao" [(ngModel)]="model.rg.orgao" placeholder="Orgão/UF" item-end></ion-input>
+                <ion-input type="Date" name="rgExpedicao" [(ngModel)]="model.rg.dataExpedicao"></ion-input>
+            </ion-label>
+        </div>
+        <!--
+ telefones: Telefone[];
+  dependentes: Dependente[];
+  rg : Rg;
+  titulo: TituloEleitor;
+  tipoSanguineo: string;
+  estadoCivil: string;
+  dataCasamento: string;
+  grauInstrucao: GrauInstrucao;
+  formacaoProfissional: string;
+  empregador: Empregador;
+-->
+    </ion-list>
+</ion-content>
+<ion-footer style="text-align: center; background-color: #505050;">
+    <button ion-button small (click)="salvar()" color="primary">Salvar</button>
+    <button ion-button small (click)="cancelar()" color="danger">Cancelar</button>
+</ion-footer>

@@ -1,0 +1,40 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Ionic Rest Api Example
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-card>
+        <ion-avatar>
+            <img class="img-loaded" src="./../../../assets/icon/favicon.ico">
+        </ion-avatar>
+        <ion-card-content>
+            <ion-card-title>
+                <h2>Nome: </h2>
+                <h2><b>{{ obreiro.nome }}</b></h2>
+            </ion-card-title>
+            <div>
+                <h2>Cim: </h2>
+                <h2><b>{{ obreiro.cim }}</b></h2>
+            </div>
+        </ion-card-content>
+        <ion-buttons>
+            <button ion-button color="primary" (click)="openEditObreiro(obreiro.id)">
+            <ion-icon name="create"></ion-icon>
+            Editar
+          </button>
+            <button ion-button color="danger" (click)="deleteObreiro(obreiro)">
+            <ion-icon name="trash"></ion-icon>
+            Excluir
+          </button>
+            <button ion-button color="secundary" (click)="cancelar()">
+            <ion-icon name="exit"></ion-icon>
+            Sair
+          </button>
+        </ion-buttons>
+    </ion-card>
+</ion-content>
